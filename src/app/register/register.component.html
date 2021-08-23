@@ -1,8 +1,8 @@
-<app-loader></app-loader>
+<app-loader *ngIf="showLoader()"></app-loader>
 <div class="background">
     <form id="register">
       <header class="form-header">
-        <h2 class="heading">Register</h2>
+        <h2 class="heading" (click)="showLoaderClick()">Register</h2>
       </header>
       <div class="form-control">
         <label for="#emailInput">Name</label>
