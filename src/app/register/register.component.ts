@@ -1,13 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
 import RegisterService from './register.service';
-import HttpError from '../config/httpErrorHandler.service';
+import RegisterHttpError from './registerHttpError.service';
 import LoaderService from '../loader/loader.service';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss'],
-  providers: [RegisterService, HttpError]
+  providers: [RegisterService, RegisterHttpError]
 })
 export class RegisterComponent implements OnInit {
   @Input() userName:string = ''
